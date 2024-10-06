@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+
+  input[type="email"] {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+  }
+
+  button {
+    @include button-base;
+    background-color: $primary-color;
+    color: $color-white;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

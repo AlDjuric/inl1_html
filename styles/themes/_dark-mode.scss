@@ -1,0 +1,115 @@
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+#how-it-works,
+#money-transfer-and-payments,
+#faq,
+.testimonial-item {
+  background-color: $light-bg;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  p {
+    margin-right: 0.5rem;
+  }
+
+  .slider {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 2px;
+      bottom: 1px;
+      background-color: white;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+  }
+}
+
+.dark-mode-toggle:checked + .page-wrapper {
+  background-color: $dark-bg-color;
+  color: $dark-text-color;
+
+  #how-it-works,
+  #money-transfer-and-payments,
+  #faq,
+  .testimonial-item {
+    background-color: $dark-light-bg;
+  }
+
+  .btn-primary {
+    background-color: $dark-button-bg-color;
+    color: $dark-button-text-color;
+
+    &:hover {
+      background-color: darken($dark-button-bg-color, 10%);
+    }
+  }
+
+  .nav-menu li a {
+    color: $dark-text-color;
+
+    &:hover {
+      color: $dark-primary-color;
+    }
+  }
+
+  #hero {
+    #background-radial {
+      background: linear-gradient(
+        to top,
+        rgba($dark-primary-color, 0.05) 0%,
+        rgba($dark-primary-color, 0.03) 25%,
+        rgba($dark-primary-color, 0.01) 50%,
+        $dark-bg-color 100%
+      );
+    }
+  }
+
+  .feature-item {
+    .feature-content {
+      h3 {
+        color: $dark-text-color;
+      }
+      p {
+        color: darken($dark-text-color, 20%);
+      }
+    }
+  }
+
+  .testimonial-item {
+    background-color: lighten($dark-bg-color, 5%);
+
+    p,
+    .author-title {
+      color: darken($dark-text-color, 15%);
+    }
+  }
+
+  .toggle-switch .slider {
+    background-color: $dark-primary-color;
+
+    &::before {
+      transform: translateX(20px);
+    }
+  }
+}

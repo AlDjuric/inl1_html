@@ -1,0 +1,138 @@
+.btn-primary {
+  @include button-base;
+  background-color: $primary-color;
+  color: $color-white;
+  width: 140px;
+  height: 36px;
+  padding: 0;
+  font-size: 14px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.mobile-menu-toggle {
+  @include button-base;
+  display: none;
+  background-color: $primary-color;
+  color: $color-white;
+  padding: 10px 20px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+
+  span {
+    margin-right: 0.5rem;
+  }
+
+  input {
+    display: none;
+  }
+
+  .slider {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: $primary-color;
+
+    &:before {
+      transform: translateX(20px);
+    }
+  }
+}
+
+.discover-more {
+  @include button-base;
+  background: none;
+  border: none;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: $text-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  .chevron-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: $color-white;
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .chevron {
+    width: 16px;
+    height: 16px;
+    transform: rotate(90deg);
+  }
+
+  &:hover .chevron-circle {
+    transform: translateY(5px);
+  }
+}
+
+.arrow-icon {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.button {
+  @include button-base;
+  background-color: $primary-color;
+  color: $color-white;
+  padding: 10px 20px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.button-secondary {
+  @include button-base;
+  background-color: $secondary-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
